@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
 /// go_router_builderの画面遷移と連動してValueNotifierの生存期間を管理するDIコンテナ
+/// 複数画面で状態を共有させたい時はGoRouteDataの画面遷移をネストさせて親のGoRouteDataを渡す
 class AppState {
   AppState._internal();
   static final AppState instance = AppState._internal();
