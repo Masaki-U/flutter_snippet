@@ -24,8 +24,7 @@ final _router = GoRouter(
 @TypedGoRoute<HomeRoute>(
   path: '/',
 )
-class HomeRoute extends AppStateRoute {
-  const HomeRoute() : super(null);
+class HomeRoute extends GoRouteData {
 
   @override
   Widget build(BuildContext context, GoRouterState state) {
@@ -42,8 +41,8 @@ class HomeRoute extends AppStateRoute {
 @TypedGoRoute<DetailRoute>(
   path: '/detail/:id',
 )
-class DetailRoute extends AppStateRoute {
-  const DetailRoute(this.id) : super(id);
+class DetailRoute extends GoRouteData {
+  const DetailRoute(this.id) : super();
 
   final String id;
 
